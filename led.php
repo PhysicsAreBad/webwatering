@@ -1,4 +1,7 @@
 <html>
+<head>
+ <title>Processing</title>
+ </head>
 <body>
 <?php
 $onoroff = $_GET["state"]; // Declares the request from index.html as a variable
