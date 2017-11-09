@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
 $onoroff = $_GET["state"]; // Declares the request from index.html as a variable
 $textfile = "LEDstate.txt"; // Declares the name and location of the .txt file
@@ -10,3 +12,5 @@ fclose($fh);
  
 header("Location: index.html"); // Return to frontend (index.html) 
 ?>
+</body>
+</html>
