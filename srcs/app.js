@@ -1,5 +1,4 @@
 var passwordHash = "11566c9949ebfc75b33c06023e969509c8dedbeb4261bc087af3b9edd6039ca5b53625fb7ae5ff6362218dfadc59e5ecc72624366275113bfb56a06a6d1e76cf";
-var passwordPassed = 0;
 var $password = $(".password");
 var $water = $(".water");
 function setCookie(cname, cvalue, exdays) {
@@ -23,29 +22,31 @@ function getCookie(cname) {
     }
     return "";
 }
+
  function noCookie(form) {
  	var passwordTest = form.passwordBox.value;
 	var hash = CryptoJS.SHA512(passwordTest);
 	if (passwordHash == hash) {
 		setCookie("password","check","10");
+        console.log("check");
         $password.fadeOut();
         $water.fadeIn();
 	} else {
-        document.getElementById("incorrect").innerHTML = "Incorrect";
-        document.getElementById("incorrect").style.color = 'red';
+       document.getElementById("incorrect").innerHTML="Incorrect";
+        document.getElementById("incorrect").style.color='red';
 	}
  }
  
-
+function deleteCookie(cname) {
+    document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    console.log("Delete cookie");
+}
 $(document).ready(() => {
     $water.hide();
 	var cookie=getCookie("password");
 	   if (cookie == "check") {
         $password.fadeOut();
         $water.fadeIn();
-	   } else if (passwordPassed = 1) {
-        $password.fadeOut();
-        $water.fadeIn();
-        }
+	   } 
 })
 
