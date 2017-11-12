@@ -1,0 +1,9 @@
+* {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	color: black;
+}
+h1 {
+	text-align: center;
+	font-size: 40px;
+	padding-bottom: 40px;
+}

@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 	<style type="text/css">
 		*{
 			text-align: center;
@@ -10,17 +11,33 @@
 	<title>Password Check</title>
 </head>
 <body>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/crypto-js@3.1.9-1/core.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/crypto-js@3.1.9-1/cipher-core.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/crypto-js@3.1.9-1/crypto-js.js"></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="app.js"></script>
-<div id="container">
-	<h1>Enter Password</h1>
-	<form name="password">
-		<input type="text" name="passwordBox">
-		<input type="button" name="enter" value="read" onclick="noCookie(this.form)">
-	</form>
-</div>
+	<div id="container">
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/crypto-js@3.1.9-1/core.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/crypto-js@3.1.9-1/cipher-core.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/crypto-js@3.1.9-1/crypto-js.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<div id="password">
+			<h1>Enter Password</h1>
+			<form name="password">
+				<input type="text" name="passwordBox">
+				<input type="button" name="enter" value="read" onclick="noCookie(this.form)">
+			</form>
+			<p class="incorrect"></p>
+		</div>
+		<div class="water">
+			<!-- This is just for aesthetics, centering the content within the paragraph -->
+			<p align="center">
+				<font size="8">
+  
+			<!-- This part is a a link, which also sends a request to the php-document, telling it to write 1 or 0 to LEDstate.txt -->
+					<b><a href="led.php?state=1">Manual Watering</a></b> /
+					<b><a href="led.php?state=0">Overide Watering</a></b> /
+					<b><a href="led.php?state=2">Turn Off Ardiuno</a></b> /
+ 					<b><a href="led.php?state=3">Turn on Ardiuno</a></b>
+				</font>
+			</p>
+		</div>
+	</div>	
 </body>
 </html>
