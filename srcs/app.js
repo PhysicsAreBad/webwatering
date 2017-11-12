@@ -37,9 +37,8 @@ function getCookie(cname) {
 	}
  }
  
-function deleteCookie(cname) {
-    document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    console.log("Delete cookie");
+function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=0'
 }
 $(document).ready(() => {
     $water.hide();
