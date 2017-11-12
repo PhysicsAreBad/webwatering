@@ -35,7 +35,7 @@ function getCookie(cname) {
 $(document).ready(() => {
 	var cookie=getCookie("password");
 	if (cookie == "check") {
-		alert("Done")
+		window.open("https://google.com");
 	} else {
 		
 	}
