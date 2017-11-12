@@ -32,14 +32,12 @@ function getCookie(cname) {
 	}
  }
 
-function passwordCheck(form) {
+$(document).ready(() => {
 	var cookie=getCookie("password");
-	if (cookie == "") {
-		noCookie(form);
-		console.log("No Cookie")
-	} else if (cookie == "check") {
-		alert("Cookies!");
+	if (cookie == "check") {
+		alert("Done")
 	} else {
-		alert("Your Cheating");
+		
 	}
-}
+})
+
