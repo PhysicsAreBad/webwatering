@@ -61,6 +61,7 @@ function getCookie(cname) {
  
 function eraseCookie(name) {
     document.cookie = "password" + '=; Max-Age=0; path=/';
+    reload();
 }
 $(document).ready(() => {
     $water.hide();
