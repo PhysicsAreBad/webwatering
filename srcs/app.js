@@ -36,22 +36,19 @@ function getCookie(cname) {
         setCookie("password","check","10");
         setCookie("username","jack","10");
         location.reload(true);
-}
     } else if (passwordHash2 == hash) {
         setCookie("password","check","4");
         setCookie("username","heshiki","4");
         location.reload(true);
-}
 	} else if (passwordHash3 == hash) {
         setCookie("password","check","2");
         setCookie("username","katelyn","2");
         location.reload(true);
-}
      } else {
        document.getElementById("incorrect").innerHTML="Incorrect";
        document.getElementById("incorrect").style.color='red';
 	}
-}
+}z
  
 function eraseCookie(name) {
     document.cookie = "password" + '=; Max-Age=0; path=/';
