@@ -38,7 +38,7 @@ function getCookie(cname) {
  }
  
 function eraseCookie(name) {
-    document.cookie = "password" + '=; Max-Age=0'
+    document.cookie = "password" + '=; Max-Age=0; path=/';
 }
 $(document).ready(() => {
     $water.hide();
