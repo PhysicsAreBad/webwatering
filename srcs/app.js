@@ -27,7 +27,7 @@ function getCookie(cname) {
  	var passwordTest = form.passwordBox.value;
 	var hash = CryptoJS.SHA512(passwordTest);
 	if (passwordHash == hash) {
-		setCookie("password","check","10");
+		setCookie("password","check","4");
         console.log("check");
         $password.fadeOut();
         $water.fadeIn();
