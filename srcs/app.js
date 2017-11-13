@@ -35,22 +35,18 @@ function getCookie(cname) {
     if (passwordHash1 == hash) {
         setCookie("password","check","10");
         setCookie("username","jack","10");
-        $password.fadeOut();
-        $mail.fadeOut(100);
-        $water.fadeIn();
-        document.getElementById("loggin-name").innerHTML="Welcome Jack, &#9662;";
+        location.reload(true);
+}
     } else if (passwordHash2 == hash) {
         setCookie("password","check","4");
         setCookie("username","heshiki","4");
-        $password.fadeOut();
-        $water.fadeIn();
-        document.getElementById("loggin-name").innerHTML="Welcome Ms.Heshiki, &#9662;";
+        location.reload(true);
+}
 	} else if (passwordHash3 == hash) {
         setCookie("password","check","2");
         setCookie("username","katelyn","2");
-        $password.fadeOut();
-        $water.fadeIn();
-        document.getElementById("loggin-name").innerHTML="Welcome Katelyn, &#9662;";
+        location.reload(true);
+}
      } else {
        document.getElementById("incorrect").innerHTML="Incorrect";
        document.getElementById("incorrect").style.color='red';
