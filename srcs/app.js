@@ -44,15 +44,21 @@ function getCookie(cname) {
         setCookie("password","check","2");
         setCookie("username","katelyn","2");
         location.reload(true);
+     } else if (hash == "") {
+
      } else {
        document.getElementById("incorrect").innerHTML="Incorrect";
        document.getElementById("incorrect").style.color='red';
 	}
 }
  
-function eraseCookie(name) {
+function eraseCookie() {
     document.cookie = "password" + '=; Max-Age=0; path=/';
     location.reload(true);
+}
+
+function goToForgot() {
+    window.location.href = "forgotPassword.html";
 }
 $water.hide();
 $logginContent.hide();

@@ -9,20 +9,22 @@
 			text-decoration: none;
 		}
 	</style>
-	<title>Password Check</title>
+	<title>Online Plant Watering Interface</title>
 </head>
 <body>
 	<div id="container">
-		<div style="display: block; outline: solid; margin-right: 75%;position:fixed;">
-				<h3 style="text-align: left;" id="loggin-name">You Haven't Logged in! &#9662;</h3>
+		<div style="display: block; outline: solid; margin-left: 80%; margin-right: 2%; position:fixed;">
+				<h3 style="text-align: right;" id="loggin-name">You Haven't Logged in! &#9662;</h3>
 				<ul id="loggin-actions">
-				<li style="text-align: left;" id="loggout" onclick="eraseCookie()">Log Out</li>
+				<li style="text-align: right;" id="forgot" onclick="goToForgot()">Forgot Password?</li>
+				<li style="text-align: right;" id="loggout" onclick="eraseCookie()">Log Out</li>
 				</ul>
 			</div>
 		<div class="password">
 			<h1>Enter Password</h1>
 			<form name="password">
-				<input type="text" name="passwordBox" autocomplete="off" autofocus>
+				<label for="passwordBox">Password:</label>
+				<input id="passwordBox" type="text" name="passwordBox" placeholder="(Hint: It isn't password)" autocomplete="off" autofocus>
 				<input type="button" name="enter" value="Submit" onclick="noCookie(this.form)">
 			</form>
 			<p id="incorrect"></p>
@@ -40,7 +42,8 @@
  				</p>
 		</div>
 		<a href=mailto:jackgonser@gmail.com?subject=Error%20Report&body=I%20was%20having%20the%20following%20problems&#58;&#10; id="mail">Send a report (email)</a>
-		<p>Uses SHA512 encryption</p>
+		<p>This website uses SHA512 encryption</p>
+		<p>&copy; Jack Gonser 2017</p>
 	</div>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/crypto-js@3.1.9-1/core.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/crypto-js@3.1.9-1/cipher-core.js"></script>
