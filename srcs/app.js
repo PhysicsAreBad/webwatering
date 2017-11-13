@@ -61,12 +61,13 @@ function getCookie(cname) {
  
 function eraseCookie(name) {
     document.cookie = "password" + '=; Max-Age=0; path=/';
+    location.reload(true);
 }
 $(document).ready(() => {
     $water.hide();
     $logginContent.hide();
     $logginBox.on('click', () => {
-        $logginContent.slideToggle(600);
+    $logginContent.slideToggle(600);
     })
 	var cookiePassword=getCookie("password");
     var cookieUsername=getCookie("username");
