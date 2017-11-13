@@ -31,32 +31,30 @@ function getCookie(cname) {
  function noCookie(form) {
  	var passwordTest = form.passwordBox.value;
 	var hash = CryptoJS.SHA512(passwordTest);
-	if ((passwordHash1||passwordHash2||passwordHash3) == hash) {
-        console.log("First check");
-       if (passwordHash1 == hash) {
+    console.log("First check");
+    if (passwordHash1 == hash) {
         setCookie("password","check","10");
         setCookie("username","jack","10");
         $password.fadeOut();
         $mail.fadeOut(100);
         $water.fadeIn();
         document.getElementById("loggin-name").innerHTML="Welcome Jack, &#9662;";
-       } else if (passwordHash2 == hash) {
+    } else if (passwordHash2 == hash) {
         setCookie("password","check","4");
         setCookie("username","heshiki","4");
         $password.fadeOut();
         $water.fadeIn();
         document.getElementById("loggin-name").innerHTML="Welcome Ms.Heshiki, &#9662;";
-	   } else if (passwordHash3 == hash) {
+	} else if (passwordHash3 == hash) {
         setCookie("password","check","2");
         setCookie("username","katelyn","2");
         $password.fadeOut();
         $water.fadeIn();
         document.getElementById("loggin-name").innerHTML="Welcome Katelyn, &#9662;";
-       } else {
+     } else {
        document.getElementById("incorrect").innerHTML="Incorrect";
        document.getElementById("incorrect").style.color='red';
-	   }
-    }
+	}
 }
  
 function eraseCookie(name) {
