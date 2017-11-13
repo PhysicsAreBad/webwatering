@@ -22,7 +22,7 @@
 		<div class="password">
 			<h1>Enter Password</h1>
 			<form name="password">
-				<input type="text" name="passwordBox">
+				<input type="text" name="passwordBox" autocomplete="off" autofocus>
 				<input type="button" name="enter" value="Submit" onclick="noCookie(this.form)">
 			</form>
 			<p id="incorrect"></p>
@@ -39,7 +39,7 @@
  					<b><a href="led.php?state=3">Turn on Ardiuno</a></b>
  				</p>
 		</div>
-		<a href=“mailto:jackgonser@gmail.com?subject=Error%20Report″” id="mail">Send a report (email)</a>
+		<a href=“mailto:jackgonser@gmail.com?subject=Error%20Report” id="mail">Send a report (email)</a>
 		<p>Uses SHA512 encryption</p>
 	</div>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/crypto-js@3.1.9-1/core.js"></script>
