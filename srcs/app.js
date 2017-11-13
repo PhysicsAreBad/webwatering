@@ -55,8 +55,8 @@ function getCookie(cname) {
        } else {
        document.getElementById("incorrect").innerHTML="Incorrect";
        document.getElementById("incorrect").style.color='red';
-	}
- }
+	   }
+    }
 }
  
 function eraseCookie(name) {
