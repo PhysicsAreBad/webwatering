@@ -63,9 +63,9 @@ function eraseCookie(name) {
     document.cookie = "password" + '=; Max-Age=0; path=/';
     location.reload(true);
 }
+$water.hide();
+$logginContent.hide();
 $(document).ready(() => {
-    $water.hide();
-    $logginContent.hide();
     $logginBox.on('click', () => {
     $logginContent.slideToggle(600);
     })
