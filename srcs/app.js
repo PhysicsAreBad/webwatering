@@ -48,7 +48,7 @@ function getCookie(cname) {
        document.getElementById("incorrect").innerHTML="Incorrect";
        document.getElementById("incorrect").style.color='red';
 	}
-}z
+}
  
 function eraseCookie(name) {
     document.cookie = "password" + '=; Max-Age=0; path=/';
