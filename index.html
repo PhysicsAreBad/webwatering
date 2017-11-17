@@ -25,22 +25,11 @@
 			<h1>Enter Password</h1>
 			<form name="password">
 				<label for="passwordBox">Password:</label>
-				<input id="passwordBox" type="text" name="passwordBox" placeholder="(Hint: It isn't password)" autocomplete="off" autofocus>
+				<input id="passwordBox" type="password" name="passwordBox" placeholder="(Hint: It isn't password)" autocomplete="off" autofocus>
+				<input type="text" name="pageCode" placeholder="The main page code" autocomplete="off">
 				<input type="button" name="enter" value="Submit" onclick="noCookie(this.form)">
 			</form>
 			<p id="incorrect"></p>
-		</div>
-		<div class="water">
-			<h1>Controls</h1>
-			<!-- This is just for aesthetics, centering the content within the paragraph -->
-			<p>
-  
-			<!-- This part is a a link, which also sends a request to the php-document, telling it to write 1 or 0 to LEDstate.txt -->
-					<b><a href="led.php?state=1">Manual Watering</a></b> /
-					<b><a href="led.php?state=0">Overide Watering</a></b> /
-					<b><a href="led.php?state=2">Turn Off Ardiuno</a></b> /
- 					<b><a href="led.php?state=3">Turn on Ardiuno</a></b>
- 				</p>
 		</div>
 		<a href=mailto:jackgonser@gmail.com?subject=Error%20Report&body=I%20was%20having%20the%20following%20problems&#58;&#10; id="mail">Send a report (email)</a>
 		<p>This website uses SHA512 encryption</p>

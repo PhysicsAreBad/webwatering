@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="srcs/styles.css">
+	<style type="text/css">
+		*{
+			text-align: center;
+			text-decoration: none;
+		}
+	</style>
+	<title>Controls</title>
+</head>
+<body>
+	<div id="main">
+		<h1>Controls</h1>
+			<!-- This is just for aesthetics, centering the content within the paragraph -->
+			<p>
+  
+			<!-- This part is a a link, which also sends a request to the php-document, telling it to write 1 or 0 to LEDstate.txt -->
+					<b><a href="led.php?state=1">Manual Watering</a></b> /
+					<b><a href="led.php?state=0">Overide Watering</a></b> /
+					<b><a href="led.php?state=2">Turn Off Ardiuno</a></b> /
+ 					<b><a href="led.php?state=3">Turn on Ardiuno</a></b>
+ 				</p>
+ 	</div>
+ 	<div id="uh-oh"><p>you cheated</p></div>
+ 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+ 	<script type="text/javascript" src="srcs/app2.js"></script>
+</body>
+</html>
