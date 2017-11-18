@@ -50,9 +50,7 @@ $(document).ready(() => {
     $logginBox.on('click', () => {
     $logginContent.slideToggle(600);
     })
-	var cookiePassword=getCookie("password");
-    var cookieUsername=getCookie("username");
-    var cookieCode+getCookie("code");
+    var cookieCode=getCookie("code");
     window.location.href = cookieCode+".html";
 })
 
